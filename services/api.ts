@@ -105,6 +105,24 @@ export const api = {
     return res.json();
   },
 
+  // Récupérer les candidatures d'un candidat
+  getCandidateApplications: async (candidateId: string, token: string): Promise<Application[]> => {
+    const res = await fetch(`${API_BASE_URL}/candidates/${candidateId}/applications`, {
+      headers: getHeaders(token),
+    });
+    if (!res.ok) throw new Error('Erreur lors de la récupération de vos candidatures');
+    return res.json();
+  },
+
+  // Récupérer les offres d'une entreprise
+  getCompanyJobs: async (companyId: string, token: string): Promise<Job[]> => {
+    const res = await fetch(`${API_BASE_URL}/companies/${companyId}/jobs`, {
+      headers: getHeaders(token),
+    });
+    if (!res.ok) throw new Error('Erreur lors de la récupération de vos offres');
+    return res.json();
+  },
+
   // S3 Upload Logic via URL signée
   getUploadUrl: async (filename: string, contentType: string, token: string): Promise<{ uploadUrl: string, fileKey: string }> => {
     const res = await fetch(`${API_BASE_URL}/cv`, {

@@ -20,7 +20,7 @@ export const geminiService = {
       const ai = new GoogleGenAI({ apiKey });
       
       const response = await ai.models.generateContent({
-        model: "gemini-3-pro-preview",
+        model: "gemini-2.0-flash",
         contents: `En tant qu'expert RH pour la région Souss-Massa, analyse la compatibilité entre ce poste et ce profil.
         
         POSTE :
