@@ -1,0 +1,55 @@
+{
+  "name": "soussmassa-rh",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Plateforme RH de la region Souss-Massa - Matching intelligent candidats/emplois",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "lint": "echo 'Add eslint when ready'",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "@google/genai": "^1.38.0",
+    "dompurify": "^3.0.6",
+    "lucide-react": "^0.563.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/dompurify": "^3.0.5",
+    "@types/node": "^22.14.0",
+    "@types/react": "^18.3.27",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^5.1.2",
+    "autoprefixer": "^10.4.16",
+    "tailwindcss": "^3.3.6",
+    "typescript": "~5.8.2",
+    "vite": "^6.4.1",
+    "vitest": "^1.0.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
